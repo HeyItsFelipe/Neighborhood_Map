@@ -1,0 +1,51 @@
+html, body {
+
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+}
+
+/* CSS for navbar */
+.navbar-style {
+
+  border: 1px solid grey;
+  max-width: 225px;
+
+}
+
+/* CSS for container in navbar */
+.container-style {
+  max-width: 225px;
+}
+
+/* CSS for hamburger icon in navbar */
+.button-left {
+  float: left;
+  margin-left: 10px;
+}
+
+/* CSS for panel containing input
+and list */
+#panel {
+  height: 200px;
+}
+
+/* CSS for input where user inputs
+desired location */
+#locationInput {
+  position: relative;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/* CSS for map that is received from
+Google Maps API */
+#map {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0%;
+}

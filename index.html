@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+  <head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">  <!-- style.css is my css -->
+  </head>
+
+  <body>
+    <div class="container-fluid">
+
+      <!-- Navbar -->
+
+      <nav class="navbar navbar-default navbar-fixed-top navbar-style">
+        <div class="container container-style">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle button-left" data-toggle="collapse" data-target="#mainNavBar">
+
+              <!-- These spans create the hamburger icon. -->
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+          </div>
+          <div class="collapse navbar-collapse navbar-left" id="mainNavBar">
+
+            <div id="panel">
+              <!-- List and Map is updated dynamically.
+                The value of the input field is data-bound to userInput(), dynamically updating locationsArray()
+                whenever a value is typed into the input field.
+                When onkeyup occurs, initMap() runs using the properties of objects in the updated locationsArray()
+                as arguments to create markers. -->
+              <input id="locationInput" placeholder="Type Here" onkeyup=initMap() data-bind="value: userInput, valueUpdate:'afterkeydown'"></input>
+                <ul id="locationsList" data-bind="foreach:locationsArray">
+                  <li><span data-bind="text:place"></span></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Map -->
+      <div id="map">
+      </div>
+    </div>
+
+    <script src="js/knockout-3.4.0.js"></script>
+    <script src="js/jquery-1.12.1.js"> </script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script> <!-- app.js is my javascript -->
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+  </body>
+</html>
+
