@@ -1,17 +1,20 @@
-html, body {
 
+html {
   height: 100%;
   margin: 0;
   padding: 0;
+}
 
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* CSS for navbar */
 .navbar-style {
-
   border: 1px solid grey;
   max-width: 225px;
-
 }
 
 /* CSS for container in navbar */
@@ -27,21 +30,28 @@ html, body {
 
 /* CSS for panel containing input
 and list */
-#panel {
+.panel-style {
   height: 200px;
 }
 
 /* CSS for input where user inputs
 desired location */
-#locationInput {
+.locationInput-style {
   position: relative;
   margin-bottom: 10px;
   margin-top: 20px;
 }
 
+/* CSS when mouse hovers over name
+of place on panel */
+li:hover {
+  background-color: gainsboro;
+  cursor: pointer;
+}
+
 /* CSS for map that is received from
 Google Maps API */
-#map {
+.map-style {
   position: absolute;
   height: 100%;
   width: 100%;
